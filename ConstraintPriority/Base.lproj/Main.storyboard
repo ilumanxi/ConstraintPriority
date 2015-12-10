@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConstraintPriority" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="风起兮" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKT-Qs-kWY">
+                                <rect key="frame" x="20" y="95" width="51" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sho-Iy-4fq" userLabel="Vip">
+                                <rect key="frame" x="79" y="95" width="20" height="20"/>
+                                <color key="backgroundColor" red="0.44119654838310174" green="0.52787805263418752" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" placeholder="YES" id="VRT-QM-QlB"/>
+                                    <constraint firstAttribute="width" constant="20" id="jRO-e2-fAf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqp-GG-F5B" userLabel="Wechat">
+                                <rect key="frame" x="107" y="95" width="20" height="20"/>
+                                <color key="backgroundColor" red="1" green="0.7816388203072504" blue="0.28007940602479742" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="3L3-Dg-EfM"/>
+                                    <constraint firstAttribute="height" constant="20" id="gfb-xH-ghs"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ABBtnAlbum" translatesAutoresizingMaskIntoConstraints="NO" id="IQN-ZH-uoG">
+                                <rect key="frame" x="270" y="270" width="60" height="60"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="uKT-Qs-kWY" secondAttribute="leading" id="3uP-2D-gcA"/>
+                            <constraint firstItem="pqp-GG-F5B" firstAttribute="leading" secondItem="uKT-Qs-kWY" secondAttribute="trailing" priority="749" constant="8" id="CRJ-sr-ZXG"/>
+                            <constraint firstItem="Sho-Iy-4fq" firstAttribute="leading" secondItem="uKT-Qs-kWY" secondAttribute="trailing" constant="8" id="EzE-gN-h3Y"/>
+                            <constraint firstItem="pqp-GG-F5B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="F71-ZZ-S0r"/>
+                            <constraint firstItem="pqp-GG-F5B" firstAttribute="leading" secondItem="Sho-Iy-4fq" secondAttribute="trailing" priority="999" constant="8" id="Hea-yg-tve"/>
+                            <constraint firstItem="Sho-Iy-4fq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="O7C-hK-q6g"/>
+                            <constraint firstItem="IQN-ZH-uoG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Tjl-4V-GcX"/>
+                            <constraint firstItem="IQN-ZH-uoG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Znb-xA-pV6"/>
+                            <constraint firstItem="uKT-Qs-kWY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="veb-YR-d8d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="toNameLeft" destination="CRJ-sr-ZXG" id="sLG-r6-nNl"/>
+                        <outlet property="toVipLeft" destination="Hea-yg-tve" id="Phg-gu-x05"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="320"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ABBtnAlbum" width="60" height="60"/>
+    </resources>
+</document>
